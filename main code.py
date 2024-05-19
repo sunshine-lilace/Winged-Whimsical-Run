@@ -41,7 +41,7 @@ class Player(pygame.sprite.Sprite):
     def __init__(self):
         super(Player, self).__init__()
         self.surf = pygame.image.load(
-            "C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\main_sprite-removebg-preview.png")
+            "main_sprite-removebg-preview.png")
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         self.rect = self.surf.get_rect()
         self.mask = pygame.mask.from_surface(self.surf)
@@ -91,7 +91,7 @@ def check_coin_collision(player1, coins1):
 class Enemy(pygame.sprite.Sprite):
     def __init__(self):
         super(Enemy, self).__init__()
-        self.surf = pygame.image.load("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\pixil-frame-0.png")
+        self.surf = pygame.image.load("pixil-frame-0.png")
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         # The starting position is randomly generated, as is the speed
         self.rect = self.surf.get_rect(
@@ -114,7 +114,7 @@ class Enemy(pygame.sprite.Sprite):
 class Coins(pygame.sprite.Sprite):
     def __init__(self):
         super(Coins, self).__init__()
-        self.surf = pygame.image.load("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\coinscopy.png")
+        self.surf = pygame.image.load("coinscopy.png")
         self.surf.set_colorkey((255, 255, 255), RLEACCEL)
         # The starting position is randomly generated, as is the speed
         self.rect = self.surf.get_rect(
@@ -139,7 +139,7 @@ class Coins(pygame.sprite.Sprite):
 class Cloud(pygame.sprite.Sprite):
     def __init__(self):
         super(Cloud, self).__init__()
-        self.surf = pygame.image.load("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\cloud.png").convert()
+        self.surf = pygame.image.load("cloud.png").convert()
         self.surf.set_colorkey((0, 0, 0), RLEACCEL)
         # The starting position is randomly generated
         self.rect = self.surf.get_rect(
@@ -194,14 +194,14 @@ all_sprites.add(player)
 # Load and play our background music
 # Sound source: http://ccmixter.org/files/Apoxode/59262
 # License: https://creativecommons.org/licenses/by/3.0/
-pygame.mixer.music.load("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\Apoxode_-_Electric_1.mp3")
+pygame.mixer.music.load("Apoxode_-_Electric_1.mp3")
 pygame.mixer.music.play(loops=-1)
 
 # Load all our sound files
 # Sound sources: Jon Fincher
-move_up_sound = pygame.mixer.Sound("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\Rising_putter.ogg")
-move_down_sound = pygame.mixer.Sound("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\Falling_putter.ogg")
-collision_sound = pygame.mixer.Sound("C:\\Users\\gaura\\PycharmProjects\\pythonProject\\venv\\Collision.ogg")
+move_up_sound = pygame.mixer.Sound("Rising_putter.ogg")
+move_down_sound = pygame.mixer.Sound("Falling_putter.ogg")
+collision_sound = pygame.mixer.Sound("Collision.ogg")
 
 # Set the base volume for all sounds
 move_up_sound.set_volume(0.5)
